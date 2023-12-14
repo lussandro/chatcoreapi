@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatCoreAPI - API do WhatsApp</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <!--  <img src="image/logo.png" alt="Logo da ChatCoreAPI" class="logo"> --> 
+            <nav>
+                
+                <ul class="nav-links">
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#features">Funcionalidades</a></li>
+                    <li><a href="#api-info">Sobre a API</a></li>
+                    <li><a href="#pricing">Preços</a></li>
+                    <li><a href="#" id="openContactModal">Contato</a></li>
+                    <li><a href="https://api.chatcoreapi.io/docs/">Documentação</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1>Descubra uma Abordagem Única para o WhatsApp</h1>
+                <p>Simplifique a comunicação e alcance resultados excepcionais com nossa API do WhatsApp.</p>
+                <p>A ChatCoreAPI é a solução perfeita se você precisar de um canal de comunicação seguro e ágil.</p>
+                <p>Transforme a Comunicação do seu Negócio com a ChatCoreApi. Agilidade, Personalização e Segurança ao Alcance de Suas Mãos!</p>
+
+                <button class="cta" onclick="showModal()">Iniciar Agora</button>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>Principais Funcionalidades:</h2>
+                <ul>
+                    <li>Mensagens Automatizadas: Envio de mensagens automáticas para saudações, respostas a perguntas frequentes e notificações.</li>
+                    <li>Integração com Chatbots: Utilização de chatbots inteligentes para fornecer suporte instantâneo e personalizado aos clientes.</li>
+                    <li>Segmentação de Contatos: Possibilidade de segmentar contatos para enviar mensagens direcionadas e relevantes.</li>
+                    <li>Agendamento de Mensagens: Funcionalidade para agendar mensagens, permitindo comunicação oportuna sem necessidade de intervenção manual.</li>
+                    <li>Envio de Mídias Ricas: Capacidade de enviar imagens, vídeos, áudios e documentos, enriquecendo a experiência de comunicação.</li>
+                    <li>Respostas Rápidas: Ferramenta para criar e usar respostas pré-definidas, agilizando a interação com o cliente.</li>
+                    <li>Relatórios e Análises: Geração de relatórios detalhados sobre o desempenho das campanhas e interações dos clientes.</li>
+                    <li>Integração com CRM e ERP: Sincronização com sistemas de CRM e ERP para uma gestão de clientes mais eficaz e personalizada.</li>
+                    <li>Enquetes e Pesquisas de Satisfação: Realização de enquetes e pesquisas diretamente no WhatsApp para coletar feedbacks valiosos.</li>
+                    <li>Chat Grupal: Criação de grupos para discussões temáticas ou suporte coletivo, melhorando o engajamento com a comunidade.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="api-info" class="api-section">
+            <div class="container">
+                <h2>Porque usar a ChatCoreApi:</h2>
+                <p>Agilidade nas Respostas: Com nossa API, seu negócio pode responder aos clientes de forma mais rápida e eficiente. Ao automatizar respostas e integrar com outros sistemas de atendimento, você economiza tempo e aumenta a satisfação do cliente.</p>
+                <p>Personalização Avançada: Aproveite a flexibilidade que a ChatCoreApi oferece! Personalize totalmente a comunicação com seus clientes, criando uma experiência única e mais humana. Diferencie sua marca no mercado, utilizando uma abordagem que vai além dos padrões limitados das APIs oficiais.</p>
+                <p>Segurança e Privacidade Aprimoradas: Embora seja uma solução alternativa, nossa API garante segurança e privacidade excepcionais. Implementamos as melhores práticas para proteger seus dados e de seus clientes, garantindo uma comunicação segura e confiável.</p>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <h2>Planos e Preços</h2>
+                <div class="price-card">
+                    <h3 class="plan-title">Enterprise</h3>
+                    <p class="price">R$ 39,90<span class="duration">/mês</span></p>
+                    <ul class="features-list">
+                        <li>01 instância</li>
+                        <li>InstanceController</li>
+                        <li>ActionsController</li>
+                        <li>SendMessage</li>
+                        <li>GroupController</li>
+                        <li>BusinessController</li>
+                        <li>ManagerInstance</li>
+                    </ul>
+                    <button class="cta" onclick="showModal()">Começar</button>
+                </div>
+            </div>
+            <div class="price-card">
+                <h3 class="plan-title">Full</h3>
+                <p class="price">R$ 99,90<span class="duration">/mês</span></p>
+                <ul class="features-list">
+                    <li>03 instâncias</li>
+                    <li>InstanceController</li>
+                    <li>ActionsController</li>
+                    <li>SendMessage</li>
+                    <li>GroupController</li>
+                    <li>BusinessController</li>
+                    <li>ManagerInstance</li>
+                </ul>
+                <button class="cta" onclick="showModal()">Começar</button>
+            </div>
+        </div>
+        </section>
+
+        <div id="cadastroModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Cadastre-se Agora</h2>
+                </div>
+                <div class="modal-body">
+                    <form id="formCadastro">
+                        <label for="cpfCnpj">CPF/CNPJ:</label>
+                        <input type="text" id="cpfCnpj" name="cpfCnpj">
+                        
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome">
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone">
+
+                        <div class="buttons">
+                            <button type="submit">Salvar</button>
+                            <button type="button" class="cancelBtn" onclick="closeModal()">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Modal de Contato -->
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeContactModal()">&times;</span>
+                    <h2>Entre em Contato</h2>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <label for="contactName">Nome:</label>
+                        <input type="text" id="contactName" name="contactName">
+
+                        <label for="contactPhone">Telefone:</label>
+                        <input type="tel" id="contactPhone" name="contactPhone">
+
+                        <label for="contactEmail">Email:</label>
+                        <input type="email" id="contactEmail" name="contactEmail">
+
+                        <label for="contactMessage">Mensagem:</label>
+                        <textarea id="contactMessage" name="contactMessage"></textarea>
+
+                        <div class="buttons">
+                            <button type="submit" class="btn send">Enviar</button>
+                            <button type="button" class="btn cancel" onclick="closeContactModal()">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="container">
+                <p>© 2023 ChatCoreAPI. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+
+        <script>
+            var modal = document.getElementById("cadastroModal");
+
+            function showModal() {
+                modal.style.display = "block";
+            }
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <script>
+            // Script para controle dos modais (abrir e fechar)
+            function closeContactModal() {
+                document.getElementById("contactModal").style.display = "none";
+            }
+        
+            const nodemailer = require('nodemailer');
+
+                const transporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                        user: 'seuemail@gmail.com',
+                        pass: 'senha-do-aplicativo' // Senha de aplicativo do Gmail
+                    }
+                });
+
+                app.post('/sendEmail', (req, res) => {
+                    const mailOptions = {
+                        from: 'seuemail@gmail.com',
+                        to: 'lussando@gmail.com',
+                        subject: 'Novo Contato do Site',
+                        text: `Nome: ${req.body.contactName}\nEmail: ${req.body.contactEmail}\nTelefone: ${req.body.contactPhone}\nMensagem: ${req.body.contactMessage}`
+                    };
+
+                    transporter.sendMail(mailOptions, (error, info) => {
+                        if (error) {
+                            return console.log(error);
+                        }
+                        console.log('Email enviado: ' + info.response);
+                        res.send('Email enviado com sucesso!');
+                    });
+                });
+
+        </script>
+        
+</body>
+</html>

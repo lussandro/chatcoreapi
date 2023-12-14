@@ -1,0 +1,224 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #128C7E;
+    color: white;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 50px;
+}
+.logo {
+    width: 180px;
+    height: auto;
+}
+.nav-links {
+    list-style: none;
+    text-align: right;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #DCF8C6;
+}
+
+.hero-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #DCF8C6;
+}
+
+button, .buttons button {
+    background-color: #34B7F1;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, .buttons button:hover {
+    background-color: #2A9FD6;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+#formCadastro {
+    display: flex;
+    flex-direction: column;
+}
+
+#formCadastro label {
+    margin-top: 10px;
+}
+
+#formCadastro input[type="text"],
+#formCadastro input[type="email"],
+#formCadastro input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-color: #075E54;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* Estilos para o Modal */
+.modal {
+    /* Estilos para o modal */
+}
+
+.modal-content {
+    /* Estilos para o conteúdo do modal */
+}
+
+.close {
+    /* Estilo para o botão de fechar */
+}
+
+/* Estilos para o formulário */
+#formCadastro {
+    /* Estilos para o formulário */
+}
+
+
+
+h2, h3 {
+    color: #128C7E; /* Cor que se destaca, mantendo a paleta */
+    margin-top: 20px;
+}
+
+.about-section, .feature-section {
+    padding: 20px 0;
+}
+
+.pricing-section {
+    background-color: #f4f4f4; /* Cor de fundo */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.price-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.plan-title {
+    color: #075E54; /* Cor escura do WhatsApp */
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #128C7E; /* Cor característica do WhatsApp */
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.duration {
+    font-size: 0.5em;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    color: #128C7E;
+}
+
+.features-list li.unavailable {
+    color: #888;
+    text-decoration: line-through;
+}
+
+.cta {
+    background-color: #25D366; /* Cor do botão WhatsApp */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.cta:hover {
+    background-color: #1Ebe5c;
+}
+
+/* Adicione estilos responsivos e personalizações conforme necessário */
+
+
